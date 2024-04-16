@@ -1,4 +1,4 @@
-from load_csv import load
+from DataTable.ex02.load2_csv import load
 
 print(load(""))  
 print(load("dv"))  

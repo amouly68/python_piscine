@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 def main():
     dataset = load("life_expectancy_years.csv")
+    dataset.head()
     france_data = dataset[dataset['country'] == 'France']
     france_data_transposed = france_data.transpose()
     #drop the first row
@@ -18,9 +19,9 @@ def main():
     plt.plot(france_data['Year'].values, france_data['Expectancy'].values, label='France')
     plt.title('France Life Expectancy Projections')
     plt.xlabel('Year')
-    plt.xticks(france_data['Year'].values[::40], rotation=45)
+    plt.xticks(france_data['Year'].values[::40])
     plt.ylabel('Life Expectancy')
-    plt.yticks(range(30, 101, 10))
+    plt.yticks(range(30, 100, 10))
     # plt.tight_layout()
     plt.show()
 

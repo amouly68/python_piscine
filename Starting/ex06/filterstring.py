@@ -1,7 +1,10 @@
 import sys
+from ft_filter import ft_filter
+
 
 def filter_string(sentence, length):
     return [word for word in sentence.split() if len(word) > length]
+
 
 def main():
     try:
@@ -13,13 +16,14 @@ def main():
 
         if not isinstance(sentence, str) or not length_input.isdigit():
             raise AssertionError("AssertionError: the arguments are bad")
-        
+
         length = int(length_input)
 
-        result = filter_string(sentence, length)
+        result = ft_filter(lambda x: len(x) > length, sentence.split())
         print(result)
     except AssertionError as e:
         print(e)
+
 
 if __name__ == "__main__":
     main()

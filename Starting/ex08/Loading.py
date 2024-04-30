@@ -2,6 +2,11 @@ import time
 
 
 def ft_tqdm(lst: range) -> None:
+    """
+    Version of tqdm without the tqdm module
+    Args: lst: range
+    Returns: None
+    """
     total = len(lst)
     start_time = time.time()
     last_update_time = start_time

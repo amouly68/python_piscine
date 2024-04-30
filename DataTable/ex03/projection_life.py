@@ -1,7 +1,7 @@
 from load_csv import load
 import matplotlib.pyplot as plt
 import pandas as pd
-# import seaborn as sns
+import seaborn as sns
 
 
 def main():
@@ -26,7 +26,7 @@ def main():
     # plt.ylabel('Life Expectancy')
     # plt.show()
 
-    # avec plt
+    # # avec plt
     plt.scatter(data_1900['Income'], data_1900['Life Expectancy'],
                 c='blue')  # alpha pour la transparence
     plt.xscale('log')

@@ -10,7 +10,7 @@ class Character(ABC):
 
         Args:
             first_name (str): The first name of the character.
-            is_alive (bool): True if is alive, False otherwise.
+            is_alive (bool): True if is alive, False otherwise.@
                             Defaults to True.
         """
         self.first_name = first_name
@@ -22,9 +22,6 @@ class Character(ABC):
         Set the character's alive status to False, representing their death.
         """
         self.is_alive = False
-
-    def __str__(self):
-        return f"{self.first_name} is {'alive' if self.is_alive else 'dead'}."
 
 
 class Stark(Character):

@@ -1,6 +1,4 @@
-from S1E7 import Baratheon, Lannister
-
-vector =('Baratheon', 'brown', 'dark')
+from S1E7 import Baratheon, Lannister, Knight, Lord
 
 Robert = Baratheon("Robert")
 print(Robert.__dict__)
@@ -17,4 +15,9 @@ print(Cersei.__str__)
 print(Cersei.is_alive)
 print("---")
 Jaine = Lannister.create_lannister("Jaine", True)
-print(f"Name : {Jaine.first_name, type(Jaine).__name__}, Alive : {Jaine.is_alive}")
+print(f"Name : {Jaine.first_name, type(Jaine).__name__}", end=', ')
+print(f"Alive : {Jaine.is_alive}")
+jaime = Knight.create_lannister("Jaime")
+tywin = Lord.create_lannister("Tywin")
+print(jaime.__dict__)
+print(tywin.__dict__)

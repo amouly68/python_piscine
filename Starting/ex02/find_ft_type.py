@@ -20,11 +20,15 @@ def all_thing_is_obj(obj: any) -> int:
     return 42
 
 
-# def print_type(obj: any) -> None:
-#     """
-#     Imprime le type de l'objet donné.
+def print_type(obj: any) -> int:
+    """
+    Imprime le type de l'objet donné.
 
-#     Args:
-#         obj (any): L'objet dont le type doit être imprimé.
-#     """
-#     print(type(obj))
+    Args:
+        obj (any): L'objet dont le type doit être imprimé.
+
+    Returns:
+        int: Toujours 42.
+    """
+    print(type(obj))
+    return 42

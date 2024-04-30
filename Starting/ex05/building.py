@@ -1,6 +1,13 @@
 import sys
 
-def count_chars(text):
+
+def count_chars(text) -> dict:
+    """
+    Count the number of upper and lower case letters,
+    punctuation marks, spaces, and digits in the given text.
+    args:   text: a string
+    return: a dict with the counts of each category
+    """
     counts = {
         "upper letters": 0,
         "lower letters": 0,
@@ -14,7 +21,7 @@ def count_chars(text):
             counts["upper letters"] += 1
         elif char.islower():
             counts["lower letters"] += 1
-        elif char in "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~":   
+        elif char in "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~":
             counts["punctuation marks"] += 1
         elif char.isspace() or char == "\n":
             counts["spaces"] += 1
@@ -23,10 +30,11 @@ def count_chars(text):
 
     return counts
 
+
 def main():
     text = ""
     if len(sys.argv) > 2:
-        raise AssertionError("AssertionError: exactly one argument is required")
+        raise AssertionError("AssertionError: only one argument is required")
     if len(sys.argv) == 2:
         text = sys.argv[1]
 
@@ -40,6 +48,7 @@ def main():
     print(f"The text contains {total_chars} characters:")
     for category, count in counts.items():
         print(f"{count} {category}")
+
 
 if __name__ == "__main__":
     try:

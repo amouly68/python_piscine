@@ -9,15 +9,15 @@ def NULL_not_found(obj: any) -> int:
         int: 0 si tout se passe bien, 1 en cas d'erreur.
     """
     if obj is None:
-        print(obj, "<class 'NoneType'>")
+        print("Nothing:", obj, "<class 'NoneType'>")
     elif isinstance(obj, float) and obj != obj:
-        print("Garlic:", obj, "<class 'float'>")
-    elif obj == 0:
-        print("Zero:", obj, "<class 'int'>")
+        print("Cheese:", obj, type(obj))
     elif isinstance(obj, str) and obj == "":
-        print("Empty:", obj, "<class 'str'>")
-    elif isinstance(obj, bool):
-        print(obj, ":", obj, "<class 'bool'>")
+        print("Empty:", obj, type(obj))
+    elif isinstance(obj, bool) and obj is False:
+        print("Fake:", obj, type(obj))
+    elif isinstance(obj, int) and obj == 0:
+        print("Zero:", obj, type(obj))
     else:
         print("Type not Found")
         return 1
